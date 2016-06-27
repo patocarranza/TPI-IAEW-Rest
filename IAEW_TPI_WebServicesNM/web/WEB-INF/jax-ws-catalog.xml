@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://ec2-54-172-125-86.compute-1.amazonaws.com/WCFReservaVehiculos/WCFReservaVehiculos.svc?singleWsdl" uri="wsdl/ec2-54-172-125-86.compute-1.amazonaws.com/WCFReservaVehiculos/WCFReservaVehiculos.svc.singlewsdl.wsdl"/>
+</catalog>
