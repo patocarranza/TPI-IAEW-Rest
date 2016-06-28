@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13-sep-2013 15:59:20 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping package="org.datacontract.schemas._2004._07.wcfreservavehiculos_business">   
+    <class name="ReservaEntity" table="Reserva">
+        <id column="id" name="id">
+            <generator class="native"/>
+        </id>
+        <property name="apellidoNombreCliente" type="string" />
+        <property name="codigoReserva" type="string" />
+        <property name="estado">
+            <type name="org.datacontract.schemas._2004._07.wcfreservavehiculos_business">
+                <param name="type">12</param>
+                <param name="enumClass">EstadoReservaEnum</param>
+            </type>
+        </property>
+        
+        
+        <property name="fechaCancelacion"/>
+        <property name="fechaHoraDevolucion"/>
+        <property name="fechaHoraRetiro"/>
+        <property name="fechaReserva"/>
+        <property name="lugarDevolucion"/>
+        <property name="lugarRetiro"/>
+        <property name="nroDocumentoCliente"/>
+        <property name="totalReserva"/>
+        <property name="usuarioCancelacion"/>
+        <property name="usuarioReserva"/>
+        
+        <many-to-one name="vehiculoPorCiudadEntity" column="id_vehiculoPorCiudadEntity"/>
+        
+    </class>    
+</hibernate-mapping>
