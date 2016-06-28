@@ -5,16 +5,16 @@
  */
 package Persistencia.ORM.DAOInterface;
 
+import Modelo.Cliente;
 import Persistencia.ORM.Util.IGenericDAO;
 import java.util.List;
-import org.datacontract.schemas._2004._07.wcfreservavehiculos_business.PaisEntity;
 
 /**
  *
  * @author ang_2
  */
-public interface IPais extends IGenericDAO<PaisEntity, Integer> {
+public interface ICliente extends IGenericDAO<Cliente, Integer> {
 
-    public List<PaisEntity> listar();
+    public List<Cliente> listar();
 
 }

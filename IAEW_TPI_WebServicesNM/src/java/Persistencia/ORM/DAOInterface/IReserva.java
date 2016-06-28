@@ -5,16 +5,16 @@
  */
 package Persistencia.ORM.DAOInterface;
 
+import Modelo.Reserva;
 import Persistencia.ORM.Util.IGenericDAO;
 import java.util.List;
-import org.datacontract.schemas._2004._07.wcfreservavehiculos_business.ReservaEntity;
 
 /**
  *
  * @author ang_2
  */
-public interface IReserva extends IGenericDAO<ReservaEntity, Integer> {
+public interface IReserva extends IGenericDAO<Reserva, Integer> {
 
-    public List<ReservaEntity> listar();
+    public List<Reserva> listar();
 
 }

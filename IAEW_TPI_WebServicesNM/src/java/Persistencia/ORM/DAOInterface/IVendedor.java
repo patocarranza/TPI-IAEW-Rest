@@ -5,16 +5,16 @@
  */
 package Persistencia.ORM.DAOInterface;
 
+import Modelo.Vendedor;
 import Persistencia.ORM.Util.IGenericDAO;
 import java.util.List;
-import org.datacontract.schemas._2004._07.wcfreservavehiculos_business.VehiculoEntity;
 
 /**
  *
  * @author ang_2
  */
-public interface IVehiculo extends IGenericDAO<VehiculoEntity, Integer> {
+public interface IVendedor extends IGenericDAO<Vendedor, Integer> {
 
-    public List<VehiculoEntity> listar();
+    public List<Vendedor> listar();
 
 }

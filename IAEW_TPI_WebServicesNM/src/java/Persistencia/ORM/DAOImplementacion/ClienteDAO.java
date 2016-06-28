@@ -5,34 +5,32 @@
  */
 package Persistencia.ORM.DAOImplementacion;
 
+import Modelo.Cliente;
+import Persistencia.ORM.DAOInterface.ICliente;
 import Persistencia.ORM.Util.GenericDAO;
 import java.util.ArrayList;
 import java.util.List;
 import org.apache.log4j.Logger;
 import org.hibernate.SQLQuery;
 import org.hibernate.Session;
-import Persistencia.ORM.DAOInterface.ICiudad;
-import Persistencia.ORM.DAOInterface.IVehiculo;
-import org.datacontract.schemas._2004._07.wcfreservavehiculos_business.CiudadEntity;
-import org.datacontract.schemas._2004._07.wcfreservavehiculos_business.VehiculoEntity;
 
 /**
  *
  * @author ang_2
  */
-public class VehiculoDAO extends GenericDAO<VehiculoEntity, Integer> implements IVehiculo {
+public class ClienteDAO extends GenericDAO<Cliente, Integer> implements ICliente {
 
-    private static final Logger LOG = Logger.getLogger(VehiculoDAO.class);
+    private static final Logger LOG = Logger.getLogger(ClienteDAO.class);
 
     @Override
-    public List<VehiculoEntity> listar() {
+    public List<Cliente> listar() {
         Session session = getHibernateTemplate();
-        List<VehiculoEntity> objetos = new ArrayList<>();
+        List<Cliente> objetos = new ArrayList<>();
         try {
-            String sql = "from VehiculoEntity";
+            String sql = "from Cliente  ";
             objetos = session.createQuery(sql).list();
         } catch (RuntimeException e) {
-            LOG.error("Error al buscar las VehiculoEntity.", e);
+            LOG.error("Error al buscar las Cliente.", e);
         }
         return objetos;
     }
