@@ -5,34 +5,32 @@
  */
 package Persistencia.ORM.DAOImplementacion;
 
+import Modelo.Vendedor;
 import Persistencia.ORM.Util.GenericDAO;
 import java.util.ArrayList;
 import java.util.List;
 import org.apache.log4j.Logger;
 import org.hibernate.SQLQuery;
 import org.hibernate.Session;
-import Persistencia.ORM.DAOInterface.ICiudad;
-import Persistencia.ORM.DAOInterface.IPais;
-import org.datacontract.schemas._2004._07.wcfreservavehiculos_business.CiudadEntity;
-import org.datacontract.schemas._2004._07.wcfreservavehiculos_business.PaisEntity;
+import Persistencia.ORM.DAOInterface.IVendedor;
 
 /**
  *
  * @author ang_2
  */
-public class PaisDAO extends GenericDAO<PaisEntity, Integer> implements IPais {
+public class VendedorDAO extends GenericDAO<Vendedor, Integer> implements IVendedor {
 
-    private static final Logger LOG = Logger.getLogger(PaisDAO.class);
+    private static final Logger LOG = Logger.getLogger(VendedorDAO.class);
 
     @Override
-    public List<PaisEntity> listar() {
+    public List<Vendedor> listar() {
         Session session = getHibernateTemplate();
-        List<PaisEntity> objetos = new ArrayList<>();
+        List<Vendedor> objetos = new ArrayList<>();
         try {
-            String sql = "from PaisEntity";
+            String sql = "from Vendedor  ";
             objetos = session.createQuery(sql).list();
         } catch (RuntimeException e) {
-            LOG.error("Error al buscar las PaisEntity.", e);
+            LOG.error("Error al buscar las Vendedor.", e);
         }
         return objetos;
     }
